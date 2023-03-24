@@ -2,6 +2,11 @@ const express = require('express')
 const app = express()
 const port = 3003
 
+const mongoDB = require("./db")
+// mongoDB();
+
+
+
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
