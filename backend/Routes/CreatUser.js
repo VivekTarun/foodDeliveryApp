@@ -6,7 +6,11 @@ const { body, validationResult } = require('express-validator');
 
 
 
-router.post("/creatuser", 
+router.post("/creatuser", [
+    body('email').isEmail(),
+    body('password', 'Password must be of 5 character').isLength({ min: 5 }),
+    body('name').isLength({ min: 5 })],
+
     async (req, res) => {
 
         const errors = validationResult(req);
