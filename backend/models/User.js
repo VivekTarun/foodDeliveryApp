@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
-const {schema} = mongoose;
+const {Schema} = mongoose;
 
-const UserSchema = new schema({
+const UserSchema = new Schema({
     name: {
         type: String,
         required: true
@@ -11,7 +11,7 @@ const UserSchema = new schema({
         type: String,
         required: true
     },
-    emial: {
+    email: {
         type: String,
         required: true
     },
@@ -20,7 +20,7 @@ const UserSchema = new schema({
         required: true
     },
     date: {
-        type: DataTransfer,
+        type: Date,
         default: Date.now
     }
 
