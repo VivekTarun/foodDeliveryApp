@@ -15,6 +15,7 @@ export const Signup = () => {
         });
         const json = await response.json()
         console.log(json);
+
         if(!json.success) {
             alert("Enter valid Credentials")
         }
