@@ -8,6 +8,7 @@ import {
 } from "react-router-dom"
 import  {Login} from './screens/Login'
 import '../node_modules/bootstrap-dark-5/dist/css/bootstrap-dark.min.css'
+import { Signup } from './screens/Signup'
 // import '../node_modules/bootstrap-dark-5/dist/js/bootstarp.bundle'
 // import '../node_modules/bootstrap-dark-5/dist/js/bootstrap.bundle.min.js'
 
@@ -18,6 +19,7 @@ const App = () => {
           <Routes>
             <Route exact path = "/" element = {<Home />} />
             <Route exact path = "/login" element = {<Login />} />
+            <Route exact path = "/creatuser" element = {<Signup />} />
           </Routes>
         </div>
     </Router>
