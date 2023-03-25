@@ -18,10 +18,14 @@ export const Login = () => {
 
     const json = await response.json()
     console.log(json);
-    
+
     if (!json.success) {
       alert("Enter valid Credentials")
-    } if(json.success) {
+
+    } 
+    if(json.success) {
+      localStorage.setItem("authToken", json.authToken);
+      console.log(localStorage.getItem("authToken"));
       navigate("/");
     }
 
